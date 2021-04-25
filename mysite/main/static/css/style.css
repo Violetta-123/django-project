@@ -34,11 +34,13 @@ padding-top: 10px;
 }
 
 .input-field{
-    width: 30%;
-    background-color: white
+    width: 25%;
+    background-color: white;
+    border-radius: 10px;
 }
 
 .login{
 background-color:#ff6b00;
 color: white;
 }
+
