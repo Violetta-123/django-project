@@ -4,3 +4,41 @@ h1{
     font-family: Arial, Verdana, sans-serif;
     text-align: center;
 }
+
+.first-header .btn{
+color:#ffffff;
+background-color:#ff6b00;
+}
+
+.first-header a{
+color: #ff6b00;
+}
+.nav-content .second-header{
+background-color: #ff6b00;
+}
+.second-header .btn{
+color:#ff6b00;
+background-color:#fff;
+}
+
+.btn{
+border-radius: 10px;
+}
+
+.content{
+height: 50vh;
+}
+.text-content h5{
+padding-top: 10px;
+
+}
+
+.input-field{
+    width: 30%;
+    background-color: white
+}
+
+.login{
+background-color:#ff6b00;
+color: white;
+}
