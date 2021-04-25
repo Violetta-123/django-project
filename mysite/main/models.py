@@ -9,11 +9,11 @@ class Department(models.Model):
 
 
 class Cabinet(models.Model):
-    number = models.IntegerField(max_length=100, verbose_name='number')
+    number = models.IntegerField(verbose_name='number')
     department = models.ForeignKey(Department, on_delete=models.CASCADE, verbose_name='department')
 
     def __str__(self):
-        return self.number
+        return str(self.number)
 
 
 class Doctor(models.Model):
@@ -24,25 +24,31 @@ class Doctor(models.Model):
     cabinet = models.ForeignKey(Cabinet, on_delete=models.CASCADE, verbose_name='cabinet')
 
     def __str__(self):
-        return self.surname + '' + self.direction
+        return self.surname + ' ' + self.name
 
 
 class Day(models.Model):
     DAY_CHOICES = (
-        ("MON", "Понедельник"),
-        ("Tuesday", "Вторник"),
-        ("Wednesday", "Среда"),
-        ("Thursday", "Четверг"),
-        ("Friday", "Пятница")
+        ("Понедельник", "Понедельник"),
+        ("Вторник", "Вторник"),
+        ("Среда", "Среда"),
+        ("Четверг", "Четверг"),
+        ("Пятница", "Пятница")
     )
-    name = models.CharField(max_length=10, choices=DAY_CHOICES, verbose_name='name')
+    name = models.CharField(max_length=15, choices=DAY_CHOICES, verbose_name='name')
+
+    def __str__(self):
+        return self.name
 
 
 class Timetable(models.Model):
-    doctor = models.ForeignKey(Cabinet, on_delete=models.CASCADE, verbose_name='cabinet')
+    doctor = models.ForeignKey(Doctor, on_delete=models.CASCADE, verbose_name='doctor')
     day = models.ForeignKey(Day, on_delete=models.CASCADE, verbose_name='day of week')
-    start = models.DateTimeField()
-    end = models.DateTimeField()
+    start = models.TimeField()
+    end = models.TimeField()
+
+    def __str__(self):
+        return self.doctor.name + ' ' + self.day.name + ' ' + str(self.start) + ' ' + str(self.end)
 
 
 class Patient(models.Model):
@@ -57,7 +63,7 @@ class Patient(models.Model):
     number = models.CharField(max_length=20, verbose_name='number')
 
     def __str__(self):
-        return self.surname + '' + self.name
+        return self.surname + ' ' + self.name
 
 
 class Record(models.Model):
