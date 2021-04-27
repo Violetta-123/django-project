@@ -5,51 +5,65 @@ font-family: Arial, Verdana, sans-serif;
 text-align: center;
 }
 
-TR {
+.header {
 color: #ff6b00;
 text-align: center;
 font-family: Trebuchet MS, sans-serif;
+font-size:120%;
 }
 #col1 {
 width: 10%; /* Ширина колонки */
 }
 
 #col2 {
-font-size:120%;
 width: 55%;
 }
 
 #col3 {
-font-size:120%;
 width: 20%;
 }
 
 #col4 {
 width: 20%;
-font-size:120%;
 }
+
+a{color:#fff; text-decoration:none;}
 
 .header1 {
 color:#fff;
+font-family: Trebuchet MS, sans-serif;
+text-align: center;
 background-color:#ff6b00;
+font-size:120%;
+height:50%;
+
 }
+
+#coll1 {
+width: 25%; /* Ширина колонки */
+}
+
+#coll2 {
+width: 25%;
+}
+
+#coll3 {
+width: 25%;
+}
+
+#coll4 {
+width: 25%;
+}
+
 .header1 .btn{
 color:#ff6b00;
 background-color:#fff;
 }
 
-.first-header {
-color: #ff6b00;
-}
 
-.second-header{
-background-color: #ff6b00;
 
-}
-.second-header .btn{
-color:#ff6b00;
-background-color:#fff;
-}
+
+
 
 .btn{
 border-radius: 10px;
