@@ -5,28 +5,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="{% static 'css/materialize.css' %}">
+<!--    <link rel="stylesheet" href="{% static 'css/materialize.css' %}">-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>-->
+<!--    <link rel="stylesheet" href="{% static 'css/style.css' %}">-->
+    <link rel="stylesheet" href="static/css/style.css"/>
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <title>{% block title %}{% endblock %}</title>
-
 </head>
 
 <body>
-<nav class="nav-extended">
-    <div class="nav-wrapper first-header" style="background-color: #ffffff">
-        <a href="#" class="brand-logo">Logo</a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="">ФЕДЕРАЛЬНЫЙ СИБИРСКИЙ НАУЧНО-КЛИНИЧЕСКИЙ ЦЕНТР</a></li>
-            <li><a href="Reg.html">Россия, г. Красноярск, пр. Свободный, 82, стр. 13</a></li>
-            <li><a href="Reg.html">Регистратура  +7 (391) 274-31-51</a></li>
+<nav class="header">
+      <table width="90%" cellpadding="5" cellspacing="0">
+       <tr>
+        <td id="col1">РИСУНОК</td>
+        <td id="col2">ФЕДЕРАЛЬНЫЙ СИБИРСКИЙ НАУЧНО-КЛИНИЧЕСКИЙ ЦЕНТР</td>
+        <td id="col3">Россия, г. Красноярск, <br> <b>пр. Свободный, 82, стр. 13</b></br></td>
+        <td id="col4">Регистратура <br><b>+7 (391) 274-31-51</b></br></td>
+       </tr>
+      </table>
+    <div class="first-header" style="background-color: #ffffff">
 
-        </ul>
+<!--        <a href="#" class="brand-logo">Logo</a>-->
+        <ul id=" S" class="">
+            <li>ФЕДЕРАЛЬНЫЙ СИБИРСКИЙ НАУЧНО-КЛИНИЧЕСКИЙ ЦЕНТР </li>
+            <li>Россия, г. Красноярск,<span style="display: block">пр. Свободный, 82, стр. 13 </span></li>
+            <li>Регистратура <br>+7 (391) 274-31-51 </li>
+
+<!--                <div class="textcols">ФЕДЕРАЛЬНЫЙ СИБИРСКИЙ НАУЧНО-КЛИНИЧЕСКИЙ ЦЕНТР-->
+<!--                    </div>-->
+<!--                <div class="textcols-item">Россия, г. Красноярск,<br> пр. Свободный, 82, стр. 13-->
+<!--                    </div>-->
+         </ul>
     </div>
-    <div class="nav-wrapper second-header" style="background-color: #ff6b00">
-        <ul class="center hide-on-med-and-down">
+
+
+
+
+    <div class="second-header" style="background-color: #ff6b00">
+        <ul class="">
             <li><a href="">Запись на прием</a></li>
             <li><a href="">Расписание</a></li>
             <li><a href="">Сотрудники</a></li>
@@ -35,59 +52,37 @@
     </div>
 
 </nav>
-<div class="container">
-    <div class="row content">
+<div class="">
+    <div class=" content">
 
-        <div class="col s5">
+        <div class="">
             <div>thhyyyt</div>
+            <!-- Grey navigation panel -->
         </div>
 
-        <div class="col s7 left-align text-content">
+        <div class="text-content">
             <h5><span style="color: #ff6b00">Медицинский</span> центр является амбулаторно-поликлиническим учреждением,
                 осуществляющим обслуживание студентов и профессорско-преподавательского состава СФУ.
-            <h5>Центр оснащен медицинским оборудованием, включая: функциональную и нейродиагностику, маммограф, флюорограф, рентген-аппарат, аппараты УЗИ, эндоскопическое, физиотерапевтическое и клинико-
+                Центр оснащен медицинским оборудованием, включая: функциональную и нейродиагностику, маммограф,
+                флюорограф, рентген-аппарат, аппараты УЗИ, эндоскопическое, физиотерапевтическое и клинико-
                 диагностическое оборудование.
             </h5>
-            </h5>
         </div>
+
     </div>
 
 </div>
-<div class="login right-align">
-    <div class="input-field">
-        <input id="login" type="text" class="validate">
-        <label for="login">Login</label>
+<div class="login">
+    <div class="">
+        <input placeholder="Placeholder" id="first_name" type="text" class="">
+        <label for="first_name">First Name</label>
     </div>
-    <div class="input-field">
-        <input id="Password" type="text" class="validate">
-        <label for="Password">Password</label>
+    <div class="">
+        <input id="last_name" type="text" class="">
+        <label for="last_name">Last Name</label>
     </div>
 </div>
 
-<script type="text/javascript" src="js/materialize.min.js"></script>
+
 </body>
-<footer class="page-footer">
-          <div class="container">
-            <div class="row">
-              <div class="col l6 s12">
-                <h5 class="white-text">Контакты</h5>
-                 <p class="white-text">телефон (регистратура): +7 (391) 274-31-51</p>
-                 <p class="white-text">телефон (директор): +7 (391) 274-31-30</p>
-                 <p class="white-text">телефон (Call-центр): +7 (391) 277-33-55</p>
-                 <p class="white-text">телефон (запись к стоматологу): +7 (391) 257-93-30</p>
-              </div>
-              <div class="col l4 offset-l2 s12">
-
-                <p class="white-text">Адрес: пр. Свободный, 82, стр. 13</p>
-                <h7 class="white-text">Общественная приёмная: about.sfu-kras.ru/node/10124</h7>
-              </div>
-            </div>
-          </div>
-          <div class="footer-copyright">
-            <div class="container">
-            © 2014 Copyright Text
-            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
-            </div>
-          </div>
-        </footer>
 </html>

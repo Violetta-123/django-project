@@ -27,28 +27,28 @@ class Doctor(models.Model):
         return self.surname + ' ' + self.name
 
 
-class Day(models.Model):
-    DAY_CHOICES = (
-        ("Понедельник", "Понедельник"),
-        ("Вторник", "Вторник"),
-        ("Среда", "Среда"),
-        ("Четверг", "Четверг"),
-        ("Пятница", "Пятница")
-    )
-    name = models.CharField(max_length=15, choices=DAY_CHOICES, verbose_name='name')
-
-    def __str__(self):
-        return self.name
+# class Day(models.Model):
+#     DAY_CHOICES = (
+#         ("Понедельник", "Понедельник"),
+#         ("Вторник", "Вторник"),
+#         ("Среда", "Среда"),
+#         ("Четверг", "Четверг"),
+#         ("Пятница", "Пятница")
+#     )
+#     name = models.CharField(max_length=15, choices=DAY_CHOICES, verbose_name='name')
+#
+#     def __str__(self):
+#         return self.name
 
 
 class Timetable(models.Model):
     doctor = models.ForeignKey(Doctor, on_delete=models.CASCADE, verbose_name='doctor')
-    day = models.ForeignKey(Day, on_delete=models.CASCADE, verbose_name='day of week')
-    start = models.TimeField()
+    # day = models.ForeignKey(Day, on_delete=models.CASCADE, verbose_name='day of week')
+    start = models.DateTimeField()
     end = models.TimeField()
 
     def __str__(self):
-        return self.doctor.name + ' ' + self.day.name + ' ' + str(self.start) + ' ' + str(self.end)
+        return self.doctor.surname + ' ' + self.doctor.name + ' ' + str(self.start) + ' ' + str(self.end)
 
 
 class Patient(models.Model):
@@ -59,7 +59,6 @@ class Patient(models.Model):
     password = models.CharField(max_length=100, verbose_name='password')
     policy = models.CharField(max_length=20, verbose_name='policy')
     email = models.CharField(max_length=50, verbose_name='email')
-    date = models.DateField()
     number = models.CharField(max_length=20, verbose_name='number')
 
     def __str__(self):
@@ -69,9 +68,11 @@ class Patient(models.Model):
 class Record(models.Model):
     patient = models.ForeignKey(Patient, on_delete=models.CASCADE)
     timetable = models.ForeignKey(Timetable, on_delete=models.CASCADE)
-    start = models.DateTimeField()
-    end = models.DateTimeField()
+    start = models.TimeField()
+    end = models.TimeField()
 
+    def __str__(self):
+        return self.patient.surname + ' ' + str(self.start)
 
 
 
