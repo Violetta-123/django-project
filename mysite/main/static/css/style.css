@@ -17,6 +17,7 @@ color: #ff6b00;
 .nav-content .second-header{
 background-color: #ff6b00;
 }
+
 .second-header .btn{
 color:#ff6b00;
 background-color:#fff;
@@ -45,3 +46,6 @@ background-color:#ff6b00;
 color: white;
 }
 
+.page-footer {
+background-color:#ff6b00;
+}
