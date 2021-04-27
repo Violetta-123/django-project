@@ -1,5 +1,16 @@
 {% extends 'main/layout.html' %}
-{% block title %}Company{% endblock %}
-{% block b %}
-<h1>Регистрация</h1>
+{% block title %}Registration{% endblock %}
+ {% block b %}<td id="coll1"><a href="homepage">На главную</a></td>{% endblock %}
+{% block entrance %}
+</div>
+<div class="login">
+    <div class="">
+        <input placeholder="Placeholder" id="first_name" type="text" class="">
+        <label for="first_name">First Name</label>
+    </div>
+    <div class="">
+        <input id="last_name" type="text" class="">
+        <label for="last_name">Last Name</label>
+    </div>
+</div>
 {% endblock %}

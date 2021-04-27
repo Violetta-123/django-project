@@ -6,6 +6,5 @@ def index(request):
     return render(request, "main/Homepage.html")
 
 
-
 def registration(request):
     return render(request, "main/Reg.html")

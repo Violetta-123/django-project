@@ -15,6 +15,7 @@
 </head>
 
 <body>
+
 <nav class="header">
       <table width="100%" cellpadding="5" cellspacing="0">
        <tr>
@@ -29,13 +30,15 @@
 
     <table width="100%"  cellpadding="5" cellspacing="0">
        <tr>
-        <td height="50" id="coll1"><a href="">Запись на прием</a></td>
-        <td id="coll2"><a href="">Расписание</a></td>
-        <td id="coll3"><a href="">Сотрудники</a></td>
-        <td id="coll4"><a class="btn" href="">Регистрация</a></td>
+        {% block b %}{% endblock %}
+        <td height="50" id="coll2"><a href="">Запись на прием</a></td>
+        <td id="coll3"><a href="">Расписание</a></td>
+        <td id="coll4"><a href="">Сотрудники</a></td>
+        <td id="coll5"><a class="btn" href="registration">Регистрация</a></td>
        </tr>
       </table>
 </nav>
+
 <!--    -->
 <!--    <div class="first-header" style="background-color: #ffffff">-->
 
@@ -65,37 +68,7 @@
     </div>
 
 </nav>
-<div class="">
-    <div class=" content">
-
-        <div class="">
-            <div>thhyyyt</div>
-            <!-- Grey navigation panel -->
-        </div>
-
-        <div class="text-content">
-            <h5><span style="color: #ff6b00">Медицинский</span> центр является амбулаторно-поликлиническим учреждением,
-                осуществляющим обслуживание студентов и профессорско-преподавательского состава СФУ.
-                Центр оснащен медицинским оборудованием, включая: функциональную и нейродиагностику, маммограф,
-                флюорограф, рентген-аппарат, аппараты УЗИ, эндоскопическое, физиотерапевтическое и клинико-
-                диагностическое оборудование.
-            </h5>
-        </div>
-
-    </div>
-
-</div>
-<div class="login">
-    <div class="">
-        <input placeholder="Placeholder" id="first_name" type="text" class="">
-        <label for="first_name">First Name</label>
-    </div>
-    <div class="">
-        <input id="last_name" type="text" class="">
-        <label for="last_name">Last Name</label>
-    </div>
-</div>
-
+{% block entrance %} {% endblock %}
 
 </body>
 </html>
