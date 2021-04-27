@@ -5,6 +5,11 @@ font-family: Arial, Verdana, sans-serif;
 text-align: center;
 }
 
+TR {
+color: #ff6b00;
+text-align: center;
+font-family: Trebuchet MS, sans-serif;
+}
 #col1 {
 width: 10%; /* Ширина колонки */
 }
@@ -12,22 +17,26 @@ width: 10%; /* Ширина колонки */
 #col2 {
 font-size:120%;
 width: 55%;
-font-family: Trebuchet MS, sans-serif;
 }
 
 #col3 {
 font-size:120%;
 width: 20%;
-font-family: Trebuchet MS, sans-serif;
 }
 
 #col4 {
- width: 20%;
- font-family: Trebuchet MS, sans-serif;
- font-size:120%;
+width: 20%;
+font-size:120%;
 }
 
-
+.header1 {
+color:#fff;
+background-color:#ff6b00;
+}
+.header1 .btn{
+color:#ff6b00;
+background-color:#fff;
+}
 
 .first-header {
 color: #ff6b00;
