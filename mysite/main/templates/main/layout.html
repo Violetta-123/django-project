@@ -5,10 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<!--    <link rel="stylesheet" href="{% static 'css/materialize.css' %}">-->
+    <!--    <link rel="stylesheet" href="{% static 'css/materialize.css' %}">-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>-->
-<!--    <link rel="stylesheet" href="{% static 'css/style.css' %}">-->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700' rel='stylesheet' type='text/css'>
+    <!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>-->
+    <!--    <link rel="stylesheet" href="{% static 'css/style.css' %}">-->
     <link rel="stylesheet" href="static/css/style.css"/>
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <title>{% block title %}{% endblock %}</title>
@@ -16,58 +18,34 @@
 
 <body>
 
-<nav class="header">
-      <table width="100%" cellpadding="5" cellspacing="0">
-       <tr>
-        <td id="col1">РИСУНОК</td>
-        <td id="col2">ФЕДЕРАЛЬНЫЙ СИБИРСКИЙ НАУЧНО-КЛИНИЧЕСКИЙ ЦЕНТР</td>
-        <td id="col3">Россия, г. Красноярск, <br> <b>пр. Свободный, 82, стр. 13</b></br></td>
-        <td id="col4">Регистратура <br><b>+7 (391) 274-31-51</b></br></td>
-       </tr>
-      </table>
-</nav>
-<nav class="header1" style="background-color: #ff6b00">
-
-    <table width="100%"  cellpadding="5" cellspacing="0">
-       <tr>
-        {% block b %}{% endblock %}
-        <td height="50" id="coll2"><a href="">Запись на прием</a></td>
-        <td id="coll3"><a href="">Расписание</a></td>
-        <td id="coll4"><a href="">Сотрудники</a></td>
-        <td id="coll5"><a class="btn" href="registration">Регистрация</a></td>
-       </tr>
-      </table>
-</nav>
-
-<!--    -->
-<!--    <div class="first-header" style="background-color: #ffffff">-->
-
-<!--&lt;!&ndash;        <a href="#" class="brand-logo">Logo</a>&ndash;&gt;-->
-<!--        <ul id=" S" class="">-->
-<!--            <li>ФЕДЕРАЛЬНЫЙ СИБИРСКИЙ НАУЧНО-КЛИНИЧЕСКИЙ ЦЕНТР </li>-->
-<!--            <li>Россия, г. Красноярск,<span style="display: block">пр. Свободный, 82, стр. 13 </span></li>-->
-<!--            <li>Регистратура <br>+7 (391) 274-31-51 </li>-->
-
-<!--&lt;!&ndash;                <div class="textcols">ФЕДЕРАЛЬНЫЙ СИБИРСКИЙ НАУЧНО-КЛИНИЧЕСКИЙ ЦЕНТР&ndash;&gt;-->
-<!--&lt;!&ndash;                    </div>&ndash;&gt;-->
-<!--&lt;!&ndash;                <div class="textcols-item">Россия, г. Красноярск,<br> пр. Свободный, 82, стр. 13&ndash;&gt;-->
-<!--&lt;!&ndash;                    </div>&ndash;&gt;-->
-<!--         </ul>-->
-<!--    </div>-->
-
-
-
-
-    <div class="second-header" style="background-color: #ff6b00">
-        <ul class="">
-            <li><a href="">Запись на прием</a></li>
-            <li><a href="">Расписание</a></li>
-            <li><a href="">Сотрудники</a></li>
-            <li><a class="btn" href="">Регистрация</a></li>
-        </ul>
+<nav>
+    <div class="first-header">
+        <table width="100%" cellpadding="5" cellspacing="0">
+            <tr>
+                <td id="col1">РИСУНОК</td>
+                <td id="col2">ФЕДЕРАЛЬНЫЙ СИБИРСКИЙ <br> НАУЧНО-КЛИНИЧЕСКИЙ ЦЕНТР</td>
+                <td id="col3">Россия, г. Красноярск, <br> <b>пр. Свободный, 82, стр. 13</b></br></td>
+                <td id="col4">Регистратура <br><b>+7 (391) 274-31-51</b></br></td>
+            </tr>
+        </table>
     </div>
 
+    <div class="second-header">
+
+        <table>
+            <tr class="tr-2">
+                {% block b %}{% endblock %}
+                <td id="coll2"><a href="">Запись на прием</a></td>
+                <td id="coll3"><a href="">Расписание</a></td>
+                <td id="coll4"><a href="">Сотрудники</a></td>
+                <td id="coll5"><a class="btn" href="registration"><b>Регистрация</b></a></td>
+
+            </tr>
+
+        </table>
+    </div>
 </nav>
+
 {% block entrance %} {% endblock %}
 
 </body>

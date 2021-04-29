@@ -2,34 +2,37 @@
 {% block title %}Homepage{% endblock %}
 
 {% block entrance %}
-<div class="">
+<div class="container">
     <div class=" content">
 
         <div class="">
-            <div>thhyyyt</div>
+            <div></div>
             <!-- Grey navigation panel -->
         </div>
 
-        <div class="text-content">
-            <h5><span style="color: #ff6b00">Медицинский</span> центр является амбулаторно-поликлиническим учреждением,
+        <div id="toright" class="text-content">
+            <h3><span style="color: #ff6b00">Медицинский центр</span> является амбулаторно-поликлиническим учреждением,
                 осуществляющим обслуживание студентов и профессорско-преподавательского состава СФУ.
-                Центр оснащен медицинским оборудованием, включая: функциональную и нейродиагностику, маммограф,
+                <br><br>Центр оснащен медицинским оборудованием, включая: функциональную и нейродиагностику, маммограф,
                 флюорограф, рентген-аппарат, аппараты УЗИ, эндоскопическое, физиотерапевтическое и клинико-
                 диагностическое оборудование.
-            </h5>
+            </h3>
         </div>
 
     </div>
-
 </div>
-<div class="login">
-    <div class="">
-        <input placeholder="Placeholder" id="first_name" type="text" class="">
-        <label for="first_name">First Name</label>
+<div class="authorization">
+    <div class="input-field">
+        <input placeholder="Имя" type="text" class="name">
     </div>
-    <div class="">
-        <input id="last_name" type="text" class="">
-        <label for="last_name">Last Name</label>
+    <div class="input-field">
+        <input placeholder="Фамилия" type="text" class="surname">
     </div>
+    <div class="input-field">
+        <input placeholder="Пароль" id="last_name" type="password" class="pass">
+        <!--        <a href="#" class="pass"></a>-->
+        <!--        <label for="last_name">ПАРОЛЬ</label>-->
+    </div>
+    <a class="login-btn" href="login"><b>Войти</b></a>
+    {% endblock %}
 </div>
-{% endblock %}
