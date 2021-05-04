@@ -200,3 +200,14 @@ padding: 12px 24px;
 border: 5px solid #fff;
 margin: 50px 50% 35px 75.2%;
 }
+
+#top-footer{
+background-color:#000;
+color:#fff
+font-size: 100%
+}
+
+.contact{
+text-align:left;
+
+}
