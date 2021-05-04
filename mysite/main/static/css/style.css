@@ -48,7 +48,7 @@ box-shadow: 0 1.5px 10px #6E6E6E;
 .second-header a:hover{
 border-bottom:5px solid #fff;
 }
-.tr-2 a{text-decoration: none;
+a{text-decoration: none;
   text-transform: uppercase;
   color:#fff;
 }
@@ -204,10 +204,29 @@ margin: 50px 50% 35px 75.2%;
 #top-footer{
 background-color:#000;
 color:#fff
-font-size: 100%
+font-size: 100%;
+
+padding-right
 }
 
-.contact{
+.rowf {
+justify-content: space-between;
+ align-items: baseline;
+    padding: 0 20px;
+}
+.rowf .contact{
 text-align:left;
+padding-left: 7%;
+}
 
+.heading {
+padding-top:1%;
+}
+
+
+.rowf .address{
+padding:1% 15% 0% 3%
+
+/*padding-right: 15%;
+padding-top:2%;*/
 }
