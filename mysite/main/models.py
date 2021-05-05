@@ -27,20 +27,6 @@ class Doctor(models.Model):
         return self.surname + ' ' + self.name
 
 
-# class Day(models.Model):
-#     DAY_CHOICES = (
-#         ("Понедельник", "Понедельник"),
-#         ("Вторник", "Вторник"),
-#         ("Среда", "Среда"),
-#         ("Четверг", "Четверг"),
-#         ("Пятница", "Пятница")
-#     )
-#     name = models.CharField(max_length=15, choices=DAY_CHOICES, verbose_name='name')
-#
-#     def __str__(self):
-#         return self.name
-
-
 class Timetable(models.Model):
     doctor = models.ForeignKey(Doctor, on_delete=models.CASCADE, verbose_name='doctor')
     # day = models.ForeignKey(Day, on_delete=models.CASCADE, verbose_name='day of week')
@@ -58,8 +44,9 @@ class Patient(models.Model):
     login = models.CharField(max_length=100, verbose_name='login')
     password = models.CharField(max_length=100, verbose_name='password')
     policy = models.CharField(max_length=20, verbose_name='policy')
-    email = models.CharField(max_length=50, verbose_name='email')
+    email = models.EmailField(blank=True, verbose_name='email')
     number = models.CharField(max_length=20, verbose_name='number')
+    date = models.DateField(verbose_name='patient date')
 
     def __str__(self):
         return self.surname + ' ' + self.name

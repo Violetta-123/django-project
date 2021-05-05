@@ -8,5 +8,19 @@
    <div class="information">
         <b><p>Личный кабинет</p></b>
         <hr size="5" color="ff6b00" width="1200" align="center">
+        <img src=”C:\Users\User\Desktop\django-proekt\pic.pngmanage.py” width="189" height="190>
+
+        <table>
+<!--            {% for i in Patient %}-->
+                <tr><td><label>Дата рождения:</label></td><td>{{ i.date }}</td>
+                <tr><td><label>Полис ОМС:</label></td><td>{{ i.policy }}</td>
+                <tr><td><label>Телефон:</label></td><td>{{ i.policy }}</td>
+                <tr><td><label>Электронная почта:</label></td><td>{{ i.email }}</td>
+                <tr><td><label>Пароль:</label></td><td>{{ i.policy }}</td>
+
+
+
+<!--            {% endfor %}-->
+        </table>
    </div>
 {% endblock %}
