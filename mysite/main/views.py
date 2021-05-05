@@ -8,3 +8,7 @@ def index(request):
 
 def registration(request):
     return render(request, "main/Reg.html")
+
+
+def personal(request):
+    return render(request, "main/PersonalArea.html")

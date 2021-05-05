@@ -1,16 +1,49 @@
 {% extends 'main/layout.html' %}
 {% block title %}Registration{% endblock %}
- {% block b %}<td id="coll1"><a href="/">На главную</a></td>{% endblock %}
-{% block entrance %}
-</div>
-<div class="login">
-    <div class="">
-        <input placeholder="Placeholder" id="first_name" type="text" class="">
-        <label for="first_name">First Name</label>
-    </div>
-    <div class="">
-        <input id="last_name" type="text" class="">
-        <label for="last_name">Last Name</label>
-    </div>
-</div>
-{% endblock %}
+{% block b %}<td id="coll1"><a href="/">На главную</a></td>{% endblock %}
+
+    {% block entrance %}
+        <div class="contented"></div>
+            <div class="box">
+                <p><b> Регистрация </b></p>
+                    <div class="login">
+                        <p>
+                            <label for="internship_name">Имя:</label>
+                            <input name="internship name" type='text' required />
+                        </p>
+                        <p>
+                            <label for="company">Фамилия:</label>
+                            <input name="company" type='text' required />
+                        </p>
+                        <p>
+                            <label for="company">Электронная почта:</label>
+                            <input name="company" type='text' required />
+                        </p>
+                        <p>
+                            <label for="company">Пароль:</label>
+                            <input name="company" type='text' required />
+                        </p>
+                        <p>
+                            <label for="company">Повторите пароль:</label>
+                            <input name="company" type='text' required />
+                        </p>
+                        <p>
+                             <label for="internship_date">Дата рождения:</label>
+                            <span>{{t.date}}</span>
+                            <input name="internship_date" type='date' ng-model='t.date'/>
+                        </p>
+                        <p>
+                            <label for="company">Номер полиса:</label>
+                            <input name="company" type='text' required />
+                        </p>
+                        <p>
+                            <label for="company">Номер телефона:</label>
+                            <input name="company" type='text' required />
+                        </p>
+                       <input type="submit" class="btn" value="Зарегистрироваться"/>
+                    </div>
+            </div>
+        <div class="contented"></div>
+    {% endblock %}
+
+

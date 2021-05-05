@@ -1,42 +1,44 @@
 {% extends 'main/layout.html' %}
 {% block title %}Homepage{% endblock %}
 
-{% block entrance %}
-<div class="container">
-    <div class=" content">
+    {% block entrance %}
+        <div class="container">
+            <div class=" content">
 
-        <div class="">
-            <div></div>
-            <!-- Grey navigation panel -->
-        </div>
-        <div class="first-image">
-            {% load static %}
-            <img src="{% static 'images/medical.jpg' %}" alt="Медицинский центр" width="200" height="250">
-<!--            <img src="images/medical.jpg" alt="Медицинский центр">-->
-        </div>
-        <div id="toright" class="text-content">
-            <h3><span style="color: #ff6b00">Медицинский центр</span> является амбулаторно-поликлиническим учреждением,
-                осуществляющим обслуживание студентов и профессорско-преподавательского состава СФУ.
-                <br><br>Центр оснащен медицинским оборудованием, включая: функциональную и нейродиагностику, маммограф,
-                флюорограф, рентген-аппарат, аппараты УЗИ, эндоскопическое, физиотерапевтическое и клинико-
-                диагностическое оборудование.
-            </h3>
+                <div class="">
+                    <div></div>
+                    <!-- Grey navigation panel -->
+                </div>
+                <div class="first-image">
+                    {% load static %}
+                    <img src="{% static 'images/medical.jpg' %}" alt="Медицинский центр" width="200" height="250">
+        <!--            <img src="images/medical.jpg" alt="Медицинский центр">-->
+                </div>
+                <div id="toright" class="text-content">
+                    <h3><span style="color: #ff6b00">Медицинский центр</span> является амбулаторно-поликлиническим учреждением,
+                        осуществляющим обслуживание студентов и профессорско-преподавательского состава СФУ.
+                        <br><br>Центр оснащен медицинским оборудованием, включая: функциональную и нейродиагностику, маммограф,
+                        флюорограф, рентген-аппарат, аппараты УЗИ, эндоскопическое, физиотерапевтическое и клинико-
+                        диагностическое оборудование.
+                    </h3>
+                </div>
+            </div>
         </div>
 
-    </div>
-</div>
-<div class="authorization">
-    <div class="input-field">
-        <input placeholder="Имя" type="text" class="name">
-    </div>
-    <div class="input-field">
-        <input placeholder="Фамилия" type="text" class="surname">
-    </div>
-    <div class="input-field">
-        <input placeholder="Пароль" id="last_name" type="password" class="pass">
-        <!--        <a href="#" class="pass"></a>-->
-        <!--        <label for="last_name">ПАРОЛЬ</label>-->
-    </div>
-    <a class="login-btn" href="login"><b>Войти</b></a>
+        <div class="authorization">
+            <div class="input-field">
+                <input placeholder="Имя" type="text" class="name">
+            </div>
+            <div class="input-field">
+                <input placeholder="Фамилия" type="text" class="surname">
+            </div>
+            <div class="input-field">
+                <input placeholder="Пароль" id="last_name" type="password" class="pass">
+                <!--        <a href="#" class="pass"></a>-->
+                <!--        <label for="last_name">ПАРОЛЬ</label>-->
+            </div>
+            <a class="login-btn" href="personal"><b>Войти</b></a>
+        </div>
+
+        <div class="contented"></div>
     {% endblock %}
-</div>
