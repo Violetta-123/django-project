@@ -1,0 +1,33 @@
+{% extends 'main/layout.html' %}
+{% block title %}Timetable{% endblock %}
+{% block b %}<td id="coll1"><a href="/">На главную</a></td>{% endblock %}
+{% block entrance %}
+    <div class="contented"></div>
+
+    <div class="timetable">
+        <table>
+            <tr>
+                <th>№ кабинета</th>
+                <th>ФИО</th>
+                <th>ПН</th>
+                <th>ВТ</th>
+                <th>СР</th>
+                <th>ЧТ</th>
+                <th>ПТ</th>
+                <th>СБ</th>
+            {% for i in timetable %}
+            <tr>
+                <td>{{ i.doctor.cabinet }}</td>
+                <td>{{ i.doctor.surname }}</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+{% endblock %}

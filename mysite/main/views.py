@@ -12,3 +12,6 @@ def registration(request):
 
 def personal(request):
     return render(request, "main/PersonalArea.html")
+
+def timetable(request):
+    return render(request, "main/Timetable.html")
