@@ -30,11 +30,20 @@ class Doctor(models.Model):
 class Timetable(models.Model):
     doctor = models.ForeignKey(Doctor, on_delete=models.CASCADE, verbose_name='doctor')
     # day = models.ForeignKey(Day, on_delete=models.CASCADE, verbose_name='day of week')
-    start = models.DateTimeField()
-    end = models.TimeField()
-
+    monstart = models.TimeField(default="00:00:00")
+    monend = models.TimeField(default="00:00:00")
+    tuestart = models.TimeField(default="00:00:00")
+    tueend = models.TimeField(default="00:00:00")
+    wedstart = models.TimeField(default="00:00:00")
+    wedend = models.TimeField(default="00:00:00")
+    thstart = models.TimeField(default="00:00:00")
+    thnend = models.TimeField(default="00:00:00")
+    frstart = models.TimeField(default="00:00:00")
+    frend = models.TimeField(default="00:00:00")
+    msatstart = models.TimeField(default="00:00:00")
+    satend = models.TimeField(default="00:00:00")
     def __str__(self):
-        return self.doctor.surname + ' ' + self.doctor.name + ' ' + str(self.start) + ' ' + str(self.end)
+        return self.doctor.surname + ' ' + self.doctor.name
 
 
 class Patient(models.Model):
