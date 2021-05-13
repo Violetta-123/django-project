@@ -207,6 +207,7 @@ background-color:#000;
 color:#fff;
 font-size: 150%;
 height: 20vh;
+
 }
 
 .rowf {
@@ -244,8 +245,8 @@ height: 5vh;
 background-color:#ff6b00;
 color:#fff;
 width:30%;
-height:70%;
-position:absolute;
+height:80%;
+position:relative;
 left: 0;
 right:0;
 margin:0 auto;
@@ -260,13 +261,13 @@ padding-top:2%;
 }
 
 .box .login{
-padding-top:5%;
+padding-top:3%;
 text-align:center;
 
 }
 .box .btn{
 border-radius: 15px;
-padding: 12px 24px;
+padding: 10px 20px;
 background-color:#ff6b00;
 color:#fff;
 border: 5px solid #fff;
@@ -291,20 +292,22 @@ text-indent:8%
 /*Расписание*/
 .timetable {
 font-family: sans-serif;
-text-align: left;
+text-align: center;
 border-collapse: separate;
 border-spacing: 5px;
 background:#C0C0C0;
-border:16 px solid #C0C0C0;
-border-radius:20ph;
+border:30 px solid #C0C0C0;
+border-radius:30ph;
+min-height: calc(100vh - 240px);
 }
 .timetable th{
 padding:10px
 }
 
 .timetable td{
-background:#696969
-padding:10px
+background-color:#696969;
+padding:10px;
+color:#fff;
 }
 
 

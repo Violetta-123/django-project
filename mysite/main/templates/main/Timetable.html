@@ -19,15 +19,16 @@
             <tr>
                 <td>{{ i.doctor.cabinet }}</td>
                 <td>{{ i.doctor.surname }}</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>{{i.monstart}}- {{i.monend}}</td>
+                <td>{{i.tuestart}}- {{i.tueend}}</td>
+                <td>{{i.wedstart}}- {{i.wedend}}</td>
+                <td>{{i.thstart}}- {{i.thnend}}</td>
+                <td>{{i.frstart}}- {{i.frend}}</td>
+                <td>{{i.msatstart}}- {{i.satend}}</td>
             </tr>
             {% endfor %}
         </table>
     </div>
 
+    <div class="contented"></div>
 {% endblock %}

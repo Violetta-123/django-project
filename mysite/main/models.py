@@ -68,7 +68,7 @@ class Record(models.Model):
     end = models.TimeField()
 
     def __str__(self):
-        return self.patient.surname + ' ' + str(self.start)
+        return self.patient.surname
 
 
 
