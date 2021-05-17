@@ -15,6 +15,7 @@ def registration(request):
 def personal(request):
     return render(request, "main/PersonalArea.html")
 
+
 def timetable(request):
     timetable = Timetable.objects.all()
     print(timetable)
