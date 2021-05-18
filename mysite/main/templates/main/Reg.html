@@ -1,54 +1,63 @@
 {% extends 'main/layout.html' %}
 {% block title %}Registration{% endblock %}
-{% block b %}<td id="coll1"><a href="/">На главную</a></td>{% endblock %}
+{% block b %}
+<td id="coll1"><a href="/">На главную</a></td>{% endblock %}
 
-    {% block entrance %}
-        <div class="contented"></div>
+{% block entrance %}
+ <script src="./js/modal.js"></script>
+
+<div id="modal_reg" class="modal modal_active">
+    <div class="modal__content">
+        <a href="" class="modal_close">X</a>
+
+        <div class="contented">
             <div class="box">
-                <p><b> Регистрация </b></p>
-                    <div class="login">
-                        <p>
-                            <label for="patient surname">Фамилия:</label>
-                            <input name="patient surname" type='text' required />
-                        </p>
-                        <p>
-                            <label for="patient name">Имя:</label>
-                            <input name="patient name" type='text' required />
-                        </p>
-                        <p>
-                            <label for="patient patronymic">Отчество:</label>
-                            <input name="patient patronymic" type='text' required />
-                        </p>
-                        <p>
-                            <label for="email">Электронная почта:</label>
-                            <input name="email" type='text' required />
-                        </p>
-                        <p>
-                            <label for="password">Пароль:</label>
-                            <input name="password" type='text' required />
-                        </p>
-                        <p>
-                            <label for="reppassword">Повторите пароль:</label>
-                            <input name="reppassword" type='text' required />
-                        </p>
-                        <p>
-                             <label for="patient date">Дата рождения:</label>
-                            <span>{{t.date}}</span>
-                            <input name="patient date" type='date' ng-model='t.date'/>
-                        </p>
-                        <p>
-                            <label for="policy">Номер полиса:</label>
-                            <input name="policy" type='text' required />
-                        </p>
-                        <p>
-                            <label for="number">Номер телефона:</label>
-                            <input name="number" type='text' required />
-                        </p>
-                        <p></p>
-                       <input type="submit" class="btn" value="Зарегистрироваться"/>
-                    </div>
+               <h1 class="modal__title">Регистрация</h1>
+                <div class="input-field">
+                    <p>
+                        <label for="patient surname">Фамилия:</label>
+                        <input placeholder="Фамилия" name="patient surname" type='text' required/>
+                    </p>
+                    <p>
+                        <label for="patient name">Имя:</label>
+                        <input placeholder="Имя" name="patient name" type='text' required/>
+                    </p>
+                    <p>
+                        <label for="patient patronymic">Отчество:</label>
+                        <input placeholder="Отчество" name="patient patronymic" type='text' required/>
+                    </p>
+                    <p>
+                        <label for="email">Электронная почта:</label>
+                        <input placeholder="E-mail" name="email" type='text' required/>
+                    </p>
+                    <p>
+                        <label for="password">Пароль:</label>
+                        <input placeholder="Пароль" name="password" type='password' required/>
+                    </p>
+                    <p>
+                        <label for="repeat_password">Повторите пароль:</label>
+                        <input name="repeat_password" type='password' required/>
+                    </p>
+                    <p>
+                        <label for="patient date">Дата рождения:</label>
+                        <span>{{t.date}}</span>
+                        <input placeholder="Подтверждение пароля" name="patient date" type='date' ng-model='t.date'/>
+                    </p>
+                    <p>
+                        <label for="policy">Номер полиса:</label>
+                        <input placeholder="16 знаков!" name="policy" type='text' required/>
+                    </p>
+                    <p>
+                        <label for="number">Номер телефона:</label>
+                        <input placeholder="+7 (ХХХ) ХХХ - ХХ - ХХ" name="number" type='text' required/>
+                    </p>
+                    <p>
+                    <a class="login-btn" href="personal"><b>Зарегистрироваться</b></a></p>
+                </div>
             </div>
-        <div class="contented"></div>
-    {% endblock %}
+        </div>
+    </div>
+</div>
+{% endblock %}
 
 
