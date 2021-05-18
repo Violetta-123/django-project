@@ -9,6 +9,9 @@ def index(request):
 
 
 def registration(request):
+    if request.method =="POST":
+        print("post")
+
     return render(request, "main/Reg.html")
 
 
@@ -20,3 +23,4 @@ def timetable(request):
     timetable = Timetable.objects.all()
     print(timetable)
     return render(request, "main/Timetable.html", {'timetable': timetable})
+

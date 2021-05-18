@@ -12,48 +12,52 @@
 
         <div class="contented">
             <div class="box">
-               <h1 class="modal__title">Регистрация</h1>
-                <div class="input-field">
-                    <p>
-                        <label for="patient surname">Фамилия:</label>
-                        <input placeholder="Фамилия" name="patient surname" type='text' required/>
-                    </p>
-                    <p>
-                        <label for="patient name">Имя:</label>
-                        <input placeholder="Имя" name="patient name" type='text' required/>
-                    </p>
-                    <p>
-                        <label for="patient patronymic">Отчество:</label>
-                        <input placeholder="Отчество" name="patient patronymic" type='text' required/>
-                    </p>
-                    <p>
-                        <label for="email">Электронная почта:</label>
-                        <input placeholder="E-mail" name="email" type='text' required/>
-                    </p>
-                    <p>
-                        <label for="password">Пароль:</label>
-                        <input placeholder="Пароль" name="password" type='password' required/>
-                    </p>
-                    <p>
-                        <label for="repeat_password">Повторите пароль:</label>
-                        <input name="repeat_password" type='password' required/>
-                    </p>
-                    <p>
-                        <label for="patient date">Дата рождения:</label>
-                        <span>{{t.date}}</span>
-                        <input placeholder="Подтверждение пароля" name="patient date" type='date' ng-model='t.date'/>
-                    </p>
-                    <p>
-                        <label for="policy">Номер полиса:</label>
-                        <input placeholder="16 знаков!" name="policy" type='text' required/>
-                    </p>
-                    <p>
-                        <label for="number">Номер телефона:</label>
-                        <input placeholder="+7 (ХХХ) ХХХ - ХХ - ХХ" name="number" type='text' required/>
-                    </p>
-                    <p>
-                    <a class="login-btn" href="personal"><b>Зарегистрироваться</b></a></p>
-                </div>
+                <form method="post" action="/registration/">
+
+                    <h1 class="modal__title">Регистрация</h1>
+                    <div class="input-field">
+                        <p>
+                            <label for="patient surname">Фамилия:</label>
+                            <input placeholder="Фамилия" name="patient surname" type='text' required/>
+                        </p>
+                        <p>
+                            <label for="patient name">Имя:</label>
+                            <input placeholder="Имя" name="patient name" type='text' required/>
+                        </p>
+                        <p>
+                            <label for="patient patronymic">Отчество:</label>
+                            <input placeholder="Отчество" name="patient patronymic" type='text' required/>
+                        </p>
+                        <p>
+                            <label for="email">Электронная почта:</label>
+                            <input placeholder="E-mail" name="email" type='text' required/>
+                        </p>
+                        <p>
+                            <label for="password">Пароль:</label>
+                            <input placeholder="Пароль" name="password" type='password' required/>
+                        </p>
+                        <p>
+                            <label for="repeat_password">Повторите пароль:</label>
+                            <input name="repeat_password" type='password' required/>
+                            <input placeholder="Подтверждение пароля" name="patient date" type='date' ng-model='t.date'/>
+
+                        </p>
+                        <p>
+                            <label for="patient date">Дата рождения:</label>
+                            <span>{{t.date}}</span>
+                        </p>
+                        <p>
+                            <label for="policy">Номер полиса:</label>
+                            <input placeholder="16 знаков!" name="policy" type='text' required/>
+                        </p>
+                        <p>
+                            <label for="number">Номер телефона:</label>
+                            <input placeholder="+7 (ХХХ) ХХХ - ХХ - ХХ" name="number" type='text' required/>
+                        </p>
+                        <p>
+                        <a class="login-btn" href="personal"><b>Зарегистрироваться</b></a></p>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
