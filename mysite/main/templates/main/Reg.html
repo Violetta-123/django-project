@@ -2,9 +2,9 @@
 {% block title %}Registration{% endblock %}
 {% block b %}
 <td id="coll1"><a href="/">На главную</a></td>{% endblock %}
-
+<script src="./js/modal.js"></script>
 {% block entrance %}
- <script src="./js/modal.js"></script>
+
 
 <div id="modal_reg" class="modal modal_active">
     <div class="modal__content">
@@ -12,21 +12,21 @@
 
         <div class="contented">
             <div class="box">
-                <form method="post" action="/registration/">
 
-                    <h1 class="modal__title">Регистрация</h1>
-                    <div class="input-field">
+                <h1 class="modal__title">Регистрация</h1>
+                <div class="input-field">
+                    <form method="post" action="/registration/">
                         <p>
                             <label for="patient surname">Фамилия:</label>
-                            <input placeholder="Фамилия" name="patient surname" type='text' required/>
+                            <input placeholder="Фамилия" name="patient_surname" type='text' required/>
                         </p>
                         <p>
                             <label for="patient name">Имя:</label>
-                            <input placeholder="Имя" name="patient name" type='text' required/>
+                            <input placeholder="Имя" name="patient_name" type='text' required/>
                         </p>
                         <p>
                             <label for="patient patronymic">Отчество:</label>
-                            <input placeholder="Отчество" name="patient patronymic" type='text' required/>
+                            <input placeholder="Отчество" name="patient_patronymic" type='text' required/>
                         </p>
                         <p>
                             <label for="email">Электронная почта:</label>
@@ -38,12 +38,14 @@
                         </p>
                         <p>
                             <label for="repeat_password">Повторите пароль:</label>
-                            <input name="repeat_password" type='password' required/>
-                            <input placeholder="Подтверждение пароля" name="patient date" type='date' ng-model='t.date'/>
+
+                            <input placeholder="Повторите пароль" name="repeat_password" type='password' required/>
+
 
                         </p>
                         <p>
                             <label for="patient date">Дата рождения:</label>
+                            <input name="patient_date" type='date' ng-model='t.date'/>
                             <span>{{t.date}}</span>
                         </p>
                         <p>
@@ -52,12 +54,14 @@
                         </p>
                         <p>
                             <label for="number">Номер телефона:</label>
-                            <input placeholder="+7 (ХХХ) ХХХ - ХХ - ХХ" name="number" type='text' required/>
+                            <input placeholder="+7 (ХХХ) ХХХ - ХХ - ХХ" name="phone" type='text' required/>
                         </p>
                         <p>
-                        <a class="login-btn" href="personal"><b>Зарегистрироваться</b></a></p>
-                    </div>
-                </form>
+                            <a class="login-btn" href="personal"><b>Зарегистрироваться</b></a>
+                        </p>
+                    </form>
+                </div>
+
             </div>
         </div>
     </div>
