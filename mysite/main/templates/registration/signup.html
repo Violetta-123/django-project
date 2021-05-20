@@ -1,0 +1,13 @@
+{% extends 'layout.html' %}
+{% block title %}Registration{% endblock %}
+{% block b %}<td id="coll1"><a href="/">На главную</a></td>{% endblock %}
+
+<!--<script src="./js/modal.js"></script>-->
+{% block entrance %}
+<h2>Регистрация</h2>
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Зарегистрироваться</button>
+</form>
+{% endblock entrance%}

@@ -1,4 +1,4 @@
-{% extends 'main/layout.html' %}
+{% extends 'layout.html' %}
 {% block title %}PersonalArea{% endblock %}
 {% block b %}<td id="coll1"><a href="/">На главную</a></td>{% endblock %}
 
@@ -11,18 +11,23 @@
             <div class="first-image">
                 {% load static %}
                 <img src="{% static 'images/pic.png' %}" alt="Иконка" width="100" height="110">
-
+                <form method="post">
+                  {% csrf_token %}
+                  {{ form.as_p }}
+                  <button type="submit">Сохранить</button>
+                  <p><a  href="{% url 'logout' %}">Log out</a></p>
+                </form>
              </div>
 
-            <table>
-                {% for p in Patient %}
-                    <tr><td><label>Дата рождения:</label></td><td>{{ p.date }}</td>
-                    <tr><td><label>Полис ОМС:</label></td><td>{{ p.policy }}</td>
-                    <tr><td><label>Телефон:</label></td><td>{{ p.policy }}</td>
-                    <tr><td><label>Электронная почта:</label></td><td>{{ p.email }}</td>
-                    <tr><td><label>Пароль:</label></td><td>{{ p.policy }}</td>
+<!--            <table>-->
+<!--                {% for p in Patient %}-->
+<!--                    <tr><td><label>Дата рождения:</label></td><td>{{ p.date }}</td>-->
+<!--                    <tr><td><label>Полис ОМС:</label></td><td>{{ p.policy }}</td>-->
+<!--                    <tr><td><label>Телефон:</label></td><td>{{ p.policy }}</td>-->
+<!--                    <tr><td><label>Электронная почта:</label></td><td>{{ p.email }}</td>-->
+<!--                    <tr><td><label>Пароль:</label></td><td>{{ p.policy }}</td>-->
 
-               {% endfor %}
-            </table>
+<!--               {% endfor %}-->
+<!--            </table>-->
        </div>
 {% endblock %}
