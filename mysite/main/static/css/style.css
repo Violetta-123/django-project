@@ -1,3 +1,9 @@
+*,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
 *{
 margin:0;
 padding:0;}
@@ -122,27 +128,42 @@ border: none;
 }
 
 /*КОНТЕЙНЕР ГЛАВНОЙ СТРАНИЦЫ*/
+.container{
+max-width: 1200px;
+margin: 0 auto;}
 
 .content{
+
 height: 50vh;
 }
 .text-content h3{
+margin-left:30%;
 color:#000;
-padding-top: 70px;
 text-align: left;
 font-family: Trebuchet MS, sans-serif;
 font-size:140%;
 }
-#toright{
-width: 48%;
-margin-left: 43%;}}
 
-.first-image {
-padding-top:70px;
-margin-right:80%;}
+.flex{
+padding-top: 100px;
+display:flex;
+}
 
 /*БЛОК АВТОРИЗАЦИИ*/
+.slider__wrapper {
+      overflow: hidden;
+    }
 
+    .slider__item {
+      flex: 0 0 50%;
+      max-width: 50%;
+      height: 250px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 7rem;
+    }
 .authorization{
 color:#fff;
 font-family: Trebuchet MS, sans-serif;

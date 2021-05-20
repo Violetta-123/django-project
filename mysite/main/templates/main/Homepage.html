@@ -1,40 +1,76 @@
 {% extends 'main/layout.html' %}
 {% block title %}Homepage{% endblock %}
+{% load static %}
 
-    {% block entrance %}
-        <div class="container">
-            <div class=" content">
+{% block entrance %}
+<div class="container">
+    <div class=" content">
+        <div class="flex">
+            <div class="first-image">
 
-                <div class="">
-                    <div></div>
-                    <!-- Grey navigation panel -->
-                </div>
-                <div class="first-image">
-                    {% load static %}
-                    <img src="{% static 'images/medical.jpg' %}" alt="Медицинский центр" width="200" height="250">
-        <!--            <img src="images/medical.jpg" alt="Медицинский центр">-->
-                </div>
-                <div id="toright" class="text-content">
-                    <h3><span style="color: #ff6b00">Медицинский центр</span> является амбулаторно-поликлиническим учреждением,
-                        осуществляющим обслуживание студентов и профессорско-преподавательского состава СФУ.
-                        <br><br>Центр оснащен медицинским оборудованием, включая: функциональную и нейродиагностику, маммограф,
-                        флюорограф, рентген-аппарат, аппараты УЗИ, эндоскопическое, физиотерапевтическое и клинико-
-                        диагностическое оборудование.
-                    </h3>
-                </div>
+                <img src="{% static 'images/мц.png' %}" alt="Медицинский центр" width="270" height="249">
+                <!--            <img src="images/medical.jpg" alt="Медицинский центр">-->
+            </div>
+            <div class="text-content">
+                <h3><span style="color: #ff6b00">Медицинский центр</span> является амбулаторно-поликлиническим
+                    учреждением,
+                    осуществляющим обслуживание студентов и профессорско-преподавательского состава СФУ.
+                    <br><br>Центр оснащен медицинским оборудованием, включая: функциональную и нейродиагностику,
+                    маммограф,
+                    флюорограф, рентген-аппарат, аппараты УЗИ, эндоскопическое, физиотерапевтическое и клинико-
+                    диагностическое оборудование.
+                </h3>
             </div>
         </div>
 
-        <div class="authorization">
-            <div class="input-field">
-                <input placeholder="Имя" type="text" class="name">
+    </div>
+    <div class="slider">
+        <div class="slider__wrapper">
+            <div class="slider__items">
+                <div class="slider__item">
+                    <img src="{% static 'images/1pic.jpg' %}" alt="Медицинский центр" width="200" height="200">
 
-                <input placeholder="Фамилия" type="text" class="surname">
+                </div>
+                <div class="slider__item">
+                    <img src="{% static 'images/2pic.jpg' %}" alt="Медицинский центр" width="200" height="200">
 
-                <input placeholder="Пароль" id="last_name" type="password" class="pass">
+                </div>
+                <div class="slider__item">
+                    <img src="{% static 'images/3pic.jpg' %}" alt="Медицинский центр" width="200" height="200">
+
+                </div>
+                <!--                    <div class="slider__item">-->
+                <!--                        &lt;!&ndash; Контент 4 слайда &ndash;&gt;-->
+                <!--                        4-->
+                <!--                    </div>-->
+                <!--                    <div class="slider__item">-->
+                <!--                        &lt;!&ndash; Контент 5 слайда &ndash;&gt;-->
+                <!--                        5-->
+                <!--                    </div>-->
             </div>
-            <a class="login-btn" href="personal"><b>Войти</b></a>
         </div>
+        <a href="#" class="slider__control" data-slide="prev"></a>
+        <a href="#" class="slider__control" data-slide="next"></a>
+        <ol class="slider__indicators">
+            <li data-slide-to="0"></li>
+            <li data-slide-to="1"></li>
+            <li data-slide-to="2"></li>
+            <li data-slide-to="3"></li>
 
-        <div class="contented"></div>
-    {% endblock %}
+        </ol>
+    </div>
+</div>
+
+<!--        <div class="authorization">-->
+<!--            <div class="input-field">-->
+<!--                <input placeholder="Имя" type="text" class="name">-->
+
+<!--                <input placeholder="Фамилия" type="text" class="surname">-->
+
+<!--                <input placeholder="Пароль" id="last_name" type="password" class="pass">-->
+<!--            </div>-->
+<!--            <a class="login-btn" href="personal"><b>Войти</b></a>-->
+<!--        </div>-->
+
+<div class="contented"></div>
+{% endblock %}
