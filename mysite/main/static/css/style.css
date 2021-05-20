@@ -145,17 +145,20 @@ font-size:140%;
 }
 
 .flex{
-padding-top: 100px;
+padding-top: 80px;
 display:flex;
 }
 
 /*БЛОК АВТОРИЗАЦИИ*/
+
 .slider__wrapper {
       overflow: hidden;
+      margin: 40px 0;
     }
 
     .slider__item {
       flex: 0 0 50%;
+
       max-width: 50%;
       height: 250px;
       display: flex;
