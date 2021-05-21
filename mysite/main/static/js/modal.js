@@ -6,9 +6,14 @@ $(document).ready(function($) {
 	
 	$('.popup-close').click(function() {
 		$(this).parents('.popup-fade').fadeOut();
+		$(this).parents('.popup-signup').fadeOut();
 		return false;
-	});		
- 
+	});
+	$('.ref').click(function() {
+		$(this).parents('.popup-fade').fadeOut();
+		$('.popup-signup').fadeIn();
+		return false;
+	});
 	$(document).keydown(function(e) {
 		if (e.keyCode === 27) {
 			e.stopPropagation();

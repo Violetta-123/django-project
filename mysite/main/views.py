@@ -21,8 +21,8 @@ def index(request):
 def registration(request):
     if request.method == "POST":
         print("post")
-        form_class = MyUserCreationForm(request.POST)
-        return render(request, "main/Reg.html")
+    form_class = MyUserCreationForm
+    return render(request, "main/signup.html", {'form_class': form_class})
 
 
     #     if request.method == "POST":
@@ -62,7 +62,7 @@ class LoginUser(LoginView):
 class SignUpView(CreateView):
     form_class = MyUserCreationForm
     success_url = reverse_lazy('login')
-    template_name = 'registration/signup.html'
+    template_name = 'main/signup.html'
 
 
 # class LoginUser(LoginView):
