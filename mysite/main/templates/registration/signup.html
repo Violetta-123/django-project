@@ -1,13 +1,28 @@
 {% extends 'layout.html' %}
 {% block title %}Registration{% endblock %}
-{% block b %}<td id="coll1"><a href="/">На главную</a></td>{% endblock %}
+{% block b %}
+<td id="coll1"><a href="/">На главную</a></td>{% endblock %}
+{% load widget_tweaks %}
 
 <!--<script src="./js/modal.js"></script>-->
 {% block entrance %}
 <h2>Регистрация</h2>
-<form method="post">
-  {% csrf_token %}
-  {{ form.as_p }}
-  <button type="submit">Зарегистрироваться</button>
+<form action="{% url 'registration' %}" method="post">
+    <div class="input-wrapper" >
+        <h2 class="input-header">Логин:</h2>
+        {{user_form.username|add_class:'input-field input'}}
+    </div>
+    <div class="input-wrapper" >
+        <h2 class="input-header">Электронная почта:</h2>
+    </div>
+    <div class="input-wrapper" >
+        <h2 class="input-header">Пароль:</h2>
+    </div>
+    <div class="input-wrapper" >
+        <h2 class="input-header">Повторите пароль:</h2>
+    </div>
+    <!--  {% csrf_token %}-->
+    <!--  {{ form.as_p }}-->
+    <button type="submit">Зарегистрироваться</button>
 </form>
 {% endblock entrance%}

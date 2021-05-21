@@ -1,22 +1,29 @@
 {% extends 'layout.html' %}
 {% block title %}Registration{% endblock %}
-{% block b %}<td id="coll1"><a href="/">На главную</a></td>{% endblock %}
+{% block b %}
+<td id="coll1"><a href="/">На главную</a></td>{% endblock %}
 
 <!--<script src="./js/modal.js"></script>-->
 {% block entrance %}
-   <div class="contented"></div>
+<div class="contented"></div>
 
-       <div class="information">
-            <b><p>Вход</p></b>
-                <form method="post">
-                  {% csrf_token %}
-                  {{ form.as_p }}
-                  <button type="submit">Войти</button>
-                  <p><a  href="{% url 'logout' %}">Log out</a></p>
-                </form>
-                    <form>
-                        Если вы не зарегистрированы.
-                        <a class="nav-link" href="{% url 'signup' %}">Зарегистрируйтесь.</a>
-                        </form>
-             </div>
+<!--<div class="information">-->
+<!--    <div class="popup-fade">-->
+<!--        <div class="popup">-->
+<!--            <a class="popup-close" href="#">&#10005</a>-->
+<!--            <div class="popup-header"><b><p>ВХОД</p></b></div>-->
+<!--            <form method="post">-->
+<!--                {% csrf_token %}-->
+<!--                {{ form.as_p }}-->
+<!--                <button type="submit">Войти</button>-->
+<!--            </form>-->
+<!--            <form>-->
+<!--                <div class="condition">Если вы не зарегистрированы,</div>-->
+<!--                <a class="nav-link" href="{% url 'signup' %}">Зарегистрируйтесь.</a>-->
+<!--            </form>-->
+<!--            &lt;!&ndash;            <p>Всплывающие окна имеют широкий диапазон применений...</p>&ndash;&gt;-->
+<!--        </div>-->
+<!--    </div>-->
+
+</div>
 {% endblock entrance%}

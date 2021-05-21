@@ -9,45 +9,55 @@ from django.views import generic
 from django.views.generic import CreateView
 from pip._vendor.requests import post
 
-from .forms import MyUserCreationForm, UserInfoForm
+from .forms import MyUserCreationForm, UserInfoForm, MyLoginUserForm
 from .models import Timetable
 
 
 def index(request):
-    return render(request, "main/Homepage.html")
+    form_class = MyLoginUserForm
+    return render(request, "main/Homepage.html", {'form_class': form_class})
 
 
 def registration(request):
     if request.method == "POST":
         print("post")
+        form_class = MyUserCreationForm(request.POST)
         return render(request, "main/Reg.html")
-#     if request.method == "POST":
-#         print("post")
-#         username = request.POST.get('username', None)
-#         # patient_patronymic = request.POST.get('patient_patronymic', None)
-#         # email = request.POST.get('email', None)
-#         password = request.POST.get('password', None)
-#         repeat_password = request.POST.get('repeat_password', None)
-#         if password != repeat_password:
-#             print('Пароли не совпадают!')
-#             return HttpResponseRedirect('/')
-#
-#             try: user = authenticate(username=username, password=password)
-#             if user is not None:
-#                 print('Такой пользователь уже существует')
-#             else: user = User.objects.create_user(username=username, password=password)
-#
-#         except:  pass
-#     if username is None or password is None:
-#         return render(request, 'example_app/registration.html', locals())
-#     if request.user.is_autnenticated:
-#         return HttpResponseRedirect('/')
-#     return render(request, 'example_app/registration.html', locals())
 
 
-# patient_date = request.POST.get('patient_date', None)
-# policy = request.POST.get('policy', None)
-# phone = request.POST.get('phone', None)
+    #     if request.method == "POST":
+    #         print("post")
+    #         username = request.POST.get('username', None)
+    #         # patient_patronymic = request.POST.get('patient_patronymic', None)
+    #         # email = request.POST.get('email', None)
+    #         password = request.POST.get('password', None)
+    #         repeat_password = request.POST.get('repeat_password', None)
+    #         if password != repeat_password:
+    #             print('Пароли не совпадают!')
+    #             return HttpResponseRedirect('/')
+    #
+    #             try: user = authenticate(username=username, password=password)
+    #             if user is not None:
+    #                 print('Такой пользователь уже существует')
+    #             else: user = User.objects.create_user(username=username, password=password)
+    #
+    #         except:  pass
+    #     if username is None or password is None:
+    #         return render(request, 'example_app/registration.html', locals())
+    #     if request.user.is_autnenticated:
+    #         return HttpResponseRedirect('/')
+    #     return render(request, 'example_app/registration.html', locals())
+
+
+    # patient_date = request.POST.get('patient_date', None)
+    # policy = request.POST.get('policy', None)
+    # phone = request.POST.get('phone', None)
+
+
+class LoginUser(LoginView):
+    form_class = MyLoginUserForm
+    template_name = 'registration/login.html'
+
 
 class SignUpView(CreateView):
     form_class = MyUserCreationForm
@@ -55,9 +65,9 @@ class SignUpView(CreateView):
     template_name = 'registration/signup.html'
 
 
-class LoginUser(LoginView):
-    form_class = AuthenticationForm
-    template_name = 'registration/login.html'
+# class LoginUser(LoginView):
+#     form_class = AuthenticationForm
+#     template_name = 'registration/login.html'
 
 
 def personal(request):
@@ -68,6 +78,7 @@ def timetable(request):
     timetable = Timetable.objects.all()
     print(timetable)
     return render(request, "main/Timetable.html", {'timetable': timetable})
+
 
 @login_required
 def personal(request):
