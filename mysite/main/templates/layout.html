@@ -3,93 +3,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <body>
-
-<nav>
-    <div class="first-header">
-        <table width="100%" cellpadding="5" cellspacing="0">
-            <tr>
-                <td id="col1" class="second-image">
-                    {% load static %}
-                    <img src="{% static 'images/иконка1.png' %}" alt="Иконка" width="80" height="80">
-                </td>
-                <td id="col2">ФЕДЕРАЛЬНЫЙ СИБИРСКИЙ <br> НАУЧНО-КЛИНИЧЕСКИЙ ЦЕНТР</td>
-                <td id="col3">Россия, г. Красноярск, <br> <b>пр. Свободный, 82, стр. 13</b></br></td>
-                <td id="col4">Регистратура <br><b>+7 (391) 274-31-51</b></br></td>
-            </tr>
-        </table>
-    </div>
-    <div class="modal"></div>
-    <div class="second-header">
-
-        <table>
-            <tr class="tr-2">
-                {% block b %}{% endblock %}
-                <td id="coll2"><a href="">Запись на прием</a></td>
-                <td id="coll3"><a href="timetable">Расписание</a></td>
-                <td id="coll4"><a href="">Сотрудники</a></td>
-                <td id="coll5">
-                    {% if user.is_authenticated %}
-                    <a href="{% url 'personal' %}" class="js-open-modal"><b>Личный кабинет</b></a>
-                    {%else%}
-                    <a class="popup-open" href="#"><b>Войти</b></a></td>
-                {%endif%}
-
-                <div class="information">
-                    <div class="popup-fade" style="display: none;">
-                        <div class="popup">
-                            <a class="popup-close" href="#">&#10005</a>
-                            <div class="popup-header"><b><p>ВХОД</p></b></div>
-                            <form action="{% url 'login'%}" method="post">
-                                {% csrf_token %}
-                                <div class="input-wrapper input--active">
-                                    <h2 class="input-header">Логин:</h2>
-                                    {{ form_class.username }}
-                                </div>
-                                <div class="input-wrapper input--active">
-                                    <h2 class="input-header">Пароль:</h2>
-                                    {{ form_class.password }}
-                                </div>
-                                <!--                                 {{ form.as_p }}-->
-                                <button type="submit">Войти</button>
-                            </form>
-                            <form>
-                                <div class="condition"></div>
-                                Если вы не зарегистрированы,
-                                <a class="ref" href="#">Зарегистрируйтесь.</a>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </tr>
-
-        </table>
-    </div>
-</nav>
-{% include 'main/signup.html' %}
-
-{% block signup %} {% endblock %}
-{% block entrance %} {% endblock %}
-
-<hr size="5" color="ff6b00">
-<div id="top-footer">
-    <div class="rowf">
-        <div class="contact">
-            <div class="heading">Контакты</div>
-            <h6> телефон (регистратура): +7 (391) 274-31-51</h6>
-            <h6> телефон (директор): +7 (391) 274-31-30</h6>
-            <h6> телефон (Call-центр): +7 (391) 277-33-55</h6>
-            <h6> телефон (запись к стоматологу): +7 (391) 257-93-30</h6>
-            <br>
-        </div>
-        <div class="address">
-            <h6> Адрес: пр. Свободный, 82, стр. 13</h6>
-            <br><h6><a href="about.sfu-kras.ru/node/10124">Общественная приёмная: about.sfu-kras.ru/node/10124</a></h6>
-        </div>
-    </div>
-</div>
-
-</body>
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
@@ -121,15 +34,73 @@
         interval: 3000,
       });
     });
-
-
-
-
-
-
-
-
     </script>
 </head>
 <script src="static/js/modal.js"></script>
+<nav>
+    <div class="first-header">
+        <table width="100%" cellpadding="5" cellspacing="0">
+            <tr>
+                <td id="col1" class="second-image">
+                    {% load static %}
+                    <img src="{% static 'images/иконка1.png' %}" alt="Иконка" width="80" height="80">
+                </td>
+                <td id="col2">ФЕДЕРАЛЬНЫЙ СИБИРСКИЙ <br> НАУЧНО-КЛИНИЧЕСКИЙ ЦЕНТР</td>
+                <td id="col3">Россия, г. Красноярск, <br> <b>пр. Свободный, 82, стр. 13</b></br></td>
+                <td id="col4">Регистратура <br><b>+7 (391) 274-31-51</b></br></td>
+            </tr>
+        </table>
+    </div>
+    <div class="modal"></div>
+    <div class="second-header">
+
+        <table>
+            <tr class="tr-2">
+                {% block b %}{% endblock %}
+                <td id="coll2"><a href="">Запись на прием</a></td>
+                <td id="coll3"><a href="timetable">Расписание</a></td>
+                <td id="coll4"><a href="">Сотрудники</a></td>
+                <td id="coll5">
+                    {% if user.is_authenticated %}
+                    <a href="{% url 'personal' %}" class="js-open-modal"><b>Личный кабинет</b></a>
+                    {%else%}
+                    <a class="popup-open" href="#"><b>Войти</b></a></td>
+                {%endif%}
+
+
+
+             </tr>
+        </table>
+    </div>
+
+    </div>
+</nav>
+
+{% include 'registration/signup.html' %}
+{% include 'registration/login.html' %}
+{% block login %} {% endblock %}
+{% block signup %} {% endblock %}
+{% block entrance %} {% endblock %}
+
+<hr size="5" color="ff6b00">
+<div id="top-footer">
+    <div class="rowf">
+        <div class="contact">
+            <div class="heading">Контакты</div>
+            <h6> телефон (регистратура): +7 (391) 274-31-51</h6>
+            <h6> телефон (директор): +7 (391) 274-31-30</h6>
+            <h6> телефон (Call-центр): +7 (391) 277-33-55</h6>
+            <h6> телефон (запись к стоматологу): +7 (391) 257-93-30</h6>
+            <br>
+        </div>
+        <div class="address">
+            <h6> Адрес: пр. Свободный, 82, стр. 13</h6>
+            <br><h6><a href="about.sfu-kras.ru/node/10124">Общественная приёмная: about.sfu-kras.ru/node/10124</a></h6>
+        </div>
+    </div>
+</div>
+
+</body>
+
+
 </html>

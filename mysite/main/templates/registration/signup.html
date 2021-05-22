@@ -1,0 +1,34 @@
+{% block signup %}
+
+<div class="information">
+    <div class="popup-signup" style="display: none;">
+        <div class="popup">
+            <a class="popup-close" href="#">&#10005</a>
+            <div class="popup-header"><b><p>РЕГИСТРАЦИЯ</p></b></div>
+            <form action="{% url 'registration' %}" method="post">
+                {% csrf_token %}
+                <div class="input-wrapper input--active">
+                    <h2 class="input-header">Логин:</h2>
+                    {{ form_class1.username }}
+                </div>
+                <div class="input-wrapper input--active">
+                    <h2 class="input-header">Электронная почта:</h2>
+                    {{ form_class1.email }}
+                </div>
+                <div class="input-wrapper input--active">
+                    <h2 class="input-header">Пароль:</h2>
+                    {{ form_class1.password1 }}
+                </div>
+                <div class="input-wrapper input--active">
+                    <h2 class="input-header">Повторите пароль:</h2>
+                    {{ form_class1.password2 }}
+                </div>
+                <button type="submit">Зарегистрироваться</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
+

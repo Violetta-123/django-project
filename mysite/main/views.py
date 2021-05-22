@@ -15,14 +15,16 @@ from .models import Timetable
 
 def index(request):
     form_class = MyLoginUserForm
-    return render(request, "main/Homepage.html", {'form_class': form_class})
+    form_class1 = MyUserCreationForm
+    return render(request, "main/Homepage.html", {'form_class': form_class, 'form_class1': MyUserCreationForm})
 
 
 def registration(request):
     if request.method == "POST":
         print("post")
+    print('nnn')
     form_class = MyUserCreationForm
-    return render(request, "main/signup.html", {'form_class': form_class})
+    return render(request, "registration/signup.html", {'form_class': form_class})
 
 
     #     if request.method == "POST":
@@ -62,7 +64,7 @@ class LoginUser(LoginView):
 class SignUpView(CreateView):
     form_class = MyUserCreationForm
     success_url = reverse_lazy('login')
-    template_name = 'main/signup.html'
+    template_name = 'registration/signup.html'
 
 
 # class LoginUser(LoginView):

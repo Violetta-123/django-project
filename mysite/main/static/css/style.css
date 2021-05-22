@@ -56,7 +56,6 @@ border-bottom:5px solid #fff;
 }*/
 
 a{text-decoration: none;
-
   color:#fff;
 }
 a,
@@ -171,7 +170,7 @@ display:flex;
 /*.popup-fade {
 	display: none;
 }*/
-.popup-fade:before {
+.popup-login:before {
 	content: '';
 	background: #000;
 	position: fixed;
@@ -182,6 +181,18 @@ display:flex;
 	opacity: 0.7;
 	z-index: 9999;
 }
+.popup-signup:before {
+	content: '';
+	background: #000;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0.7;
+	z-index: 10000;
+}
+
 .popup-open{
 background-color: #fff;
 color: #ff6b00;
@@ -195,10 +206,11 @@ border: none;}
 	left: 50%;
 	padding: 20px;
 	width: 30%;
+    text-align:center;
 	margin-left: -200px;
-	background: #fff;
+	background: #ff6b00;
 	border-radius: 15px;
-	z-index: 10000;
+	z-index: 11000;
 	opacity: 1;
 }
 .popup-close {
@@ -207,14 +219,18 @@ border: none;}
 	top: 10px;
 	right: 10px;
 }
+.input-header{
+color:#fff;
+}
 .popup-header{
 position:relative;
 text-align:center;
-margin-left:-20px;
+margin-left:-5px;
 padding-bottom:20px;
+font-size:25px;
 }
 
-.form-input{
+.form-input {
 font-style: italic;
 text-align:center;
 font-size: 100%;
@@ -227,12 +243,25 @@ box-shadow:
 border-radius: 10px;
 }
 
+.information p{
+color:#fff;
+font-family: Trebuchet MS, sans-serif;
+font-size:130%
+}
+.condition {
+color:#000;
+text-indent:8%
+}
 .information{
 color:#000;
 }
+.condition{
+color:#000;
+font-family: Trebuchet MS, sans-serif;
+}
 .condition a{
-color:#ff6b00;}
-
+color:#fff;
+}
 /*.authorization{
 color:#fff;
 font-family: Trebuchet MS, sans-serif;
@@ -361,15 +390,6 @@ font-size:100%
 /*Личный кабинет*/
 .nav-link{color:#ff6b00;}
 
-.information p{
-color:#ff6b00;
-font-family: Trebuchet MS, sans-serif;
-font-size:130%
-}
-.condition {
-color:#000;
-text-indent:8%
-}
 
 
 /*Расписание*/

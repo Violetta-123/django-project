@@ -1,29 +1,30 @@
-{% extends 'layout.html' %}
-{% block title %}Registration{% endblock %}
-{% block b %}
-<td id="coll1"><a href="/">На главную</a></td>{% endblock %}
+{% block login %}
 
-<!--<script src="./js/modal.js"></script>-->
-{% block entrance %}
-<div class="contented"></div>
+<div class="information">
+    <div class="popup-login" style="display: none;">
+        <div class="popup">
+            <a class="popup-close" href="#">&#10005</a>
+            <div class="popup-header"><b><p>ВХОД</p></b></div>
+            <form action="{% url 'login'%}" method="post">
+                {% csrf_token %}
+                <div class="input-wrapper input--active">
+                    <h2 class="input-header">Логин:</h2>
+                    {{ form_class.username }}
+                </div>
+                <div class="input-wrapper input--active">
+                    <h2 class="input-header">Пароль:</h2>
+                    {{ form_class.password }}
+                </div>
+                <button type="submit">Войти</button>
+            </form>
+            <form>
+                <div class="condition">Если вы не зарегистрированы,
+                    <a class="ref" href="#">Зарегистрируйтесь.</a>
+                </div>
 
-<!--<div class="information">-->
-<!--    <div class="popup-fade">-->
-<!--        <div class="popup">-->
-<!--            <a class="popup-close" href="#">&#10005</a>-->
-<!--            <div class="popup-header"><b><p>ВХОД</p></b></div>-->
-<!--            <form method="post">-->
-<!--                {% csrf_token %}-->
-<!--                {{ form.as_p }}-->
-<!--                <button type="submit">Войти</button>-->
-<!--            </form>-->
-<!--            <form>-->
-<!--                <div class="condition">Если вы не зарегистрированы,</div>-->
-<!--                <a class="nav-link" href="{% url 'signup' %}">Зарегистрируйтесь.</a>-->
-<!--            </form>-->
-<!--            &lt;!&ndash;            <p>Всплывающие окна имеют широкий диапазон применений...</p>&ndash;&gt;-->
-<!--        </div>-->
-<!--    </div>-->
 
+            </form>
+        </div>
+    </div>
 </div>
-{% endblock entrance%}
+{% endblock %}
