@@ -4,26 +4,22 @@
     <div class="popup-signup" style="display: none;">
         <div class="popup">
             <a class="popup-close" href="#">&#10005</a>
-            <div class="popup-header"><b><p>РЕГИСТРАЦИЯ</p></b></div>
+            <div class="popup-header"><b><h3>РЕГИСТРАЦИЯ</h3></b></div>
             <form action="{% url 'registration' %}" method="post">
                 {% csrf_token %}
                 <div class="input-wrapper input--active">
-                    <h2 class="input-header">Логин:</h2>
-                    {{ form_class1.username }}
+                    <p><span>Логин:</span>{{ form_class1.username }}</p>
                 </div>
                 <div class="input-wrapper input--active">
-                    <h2 class="input-header">Электронная почта:</h2>
-                    {{ form_class1.email }}
+                    <p><span>Электронная почта:</span>{{ form_class1.email }}</p>
                 </div>
                 <div class="input-wrapper input--active">
-                    <h2 class="input-header">Пароль:</h2>
-                    {{ form_class1.password1 }}
+                   <p><span>Пароль:</span> {{ form_class1.password1 }}</p>
                 </div>
                 <div class="input-wrapper input--active">
-                    <h2 class="input-header">Повторите пароль:</h2>
-                    {{ form_class1.password2 }}
+                    <p><span>Повторите пароль:</span> {{ form_class1.password2 }}</p>
                 </div>
-                <button type="submit">Зарегистрироваться</button>
+                <a class="signup-btn" href="/" type="submit"><b>Зарегистрироваться</b></a>
             </form>
         </div>
     </div>

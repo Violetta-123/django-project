@@ -293,7 +293,7 @@ margin: -10px 50% 35px 288%;
 
 }
 
-.login-btn{
+.login-btn, .signup-btn{
 font-family: Trebuchet MS, sans-serif;
 font-size:130%;
 background-color:#ff6b00;
