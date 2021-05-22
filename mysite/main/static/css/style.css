@@ -64,15 +64,15 @@ a:before {
  transition: all .5s;
 }
 
-.tr-2 a:hover {
+ a:hover {
   color: #000;}
 
-.tr-2 a {
+ a {
   text-transform: uppercase;
   overflow: hidden;
   z-index: 1;
 }
-.tr-2 a:after {
+ a:after {
   color: transparent;
   width: 1px;
   height: 1px;
@@ -205,7 +205,7 @@ border: none;}
 	top: 30%;
 	left: 50%;
 	padding: 20px;
-	width: 30%;
+	width: 35%;
     text-align:center;
 	margin-left: -200px;
 	background: #ff6b00;
@@ -222,15 +222,17 @@ border: none;}
 .input-header{
 color:#fff;
 }
-.popup-header{
+.popup-header h3{
 position:relative;
 text-align:center;
-margin-left:-5px;
 padding-bottom:20px;
-font-size:25px;
+font-size:180%;
+color:#fff;
+font-family: Trebuchet MS, sans-serif;
 }
 
 .form-input {
+margin-bottom:30px;
 font-style: italic;
 text-align:center;
 font-size: 100%;
@@ -244,37 +246,26 @@ border-radius: 10px;
 }
 
 .information p{
+text-align:left;
 color:#fff;
 font-family: Trebuchet MS, sans-serif;
-font-size:130%
+font-size:110%
 }
-.condition {
-color:#000;
-text-indent:8%
+
+span{
+padding-right:40px;
 }
-.information{
-color:#000;
-}
+
 .condition{
+font-size:110%;
+padding-top:10%;
 color:#000;
 font-family: Trebuchet MS, sans-serif;
+text-indent:2%
 }
 .condition a{
 color:#fff;
 }
-/*.authorization{
-color:#fff;
-font-family: Trebuchet MS, sans-serif;
-text-align: right;
-background-color:#ff6b00;
-font-size:150%;
-width:100%;
-height:350px;
-box-shadow: 0 2px 10px #6E6E6E;
-}
-.authorization a:hover {
-  color: #000;
-}*/
 
 .input-field{
 width:24%;
@@ -303,10 +294,13 @@ margin: -10px 50% 35px 288%;
 }
 
 .login-btn{
+font-family: Trebuchet MS, sans-serif;
+font-size:130%;
+background-color:#ff6b00;
 border-radius: 15px;
-padding: 12px 24px;
+padding: 12px 16px;
 border: 5px solid #fff;
-margin: 50px 50% 35px 75.2%;
+margin-top:20px;
 }
 
 /*.modal__content .login-btn{

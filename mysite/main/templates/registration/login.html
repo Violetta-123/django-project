@@ -4,22 +4,20 @@
     <div class="popup-login" style="display: none;">
         <div class="popup">
             <a class="popup-close" href="#">&#10005</a>
-            <div class="popup-header"><b><p>ВХОД</p></b></div>
+            <div class="popup-header"><b><h3>ВХОД</h3></b></div>
             <form action="{% url 'login'%}" method="post">
                 {% csrf_token %}
                 <div class="input-wrapper input--active">
-                    <h2 class="input-header">Логин:</h2>
-                    {{ form_class.username }}
+                    <p><span>Логин:</span>{{ form_class.username }}</p>
                 </div>
                 <div class="input-wrapper input--active">
-                    <h2 class="input-header">Пароль:</h2>
-                    {{ form_class.password }}
+                    <p><span>Пароль:</span>{{ form_class.password }}</p>
                 </div>
-                <button type="submit">Войти</button>
+                <a class="login-btn" href="#" type="submit"><b>Войти</b></a>
             </form>
             <form>
-                <div class="condition">Если вы не зарегистрированы,
-                    <a class="ref" href="#">Зарегистрируйтесь.</a>
+                <div class="condition"><b>Если вы не зарегистрированы,</b>
+                    <a class="ref" href="#"><b>Зарегистрируйтесь.</b></a>
                 </div>
 
 
