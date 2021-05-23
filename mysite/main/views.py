@@ -8,15 +8,17 @@ from django.urls import reverse_lazy
 from django.views import generic
 from django.views.generic import CreateView
 from pip._vendor.requests import post
+from django.http import HttpResponseRedirect
 
 from .forms import MyUserCreationForm, UserInfoForm, MyLoginUserForm
-from .models import Timetable
+from .models import Timetable, Patient
+from django.contrib.auth.models import User
 
 
 def index(request):
     form_class = MyLoginUserForm
     form_class1 = MyUserCreationForm
-    return render(request, "main/Homepage.html", {'form_class': form_class, 'form_class1': MyUserCreationForm})
+    return render(request, "main/Homepage.html", {'form_class': form_class, 'form_class1': form_class1})
 
 
 def registration(request):
@@ -66,6 +68,16 @@ class SignUpView(CreateView):
     success_url = reverse_lazy('login')
     template_name = 'registration/signup.html'
 
+    def post(self, request, *args, **kwargs):
+        form = MyUserCreationForm(request.POST)
+        if form.is_valid():
+            User.objects.create(
+                username = form.cleaned_data['username'],
+                password = form.cleaned_data['password1'],
+                email = form.cleaned_data['email'],
+            )
+        return HttpResponseRedirect('/')
+
 
 # class LoginUser(LoginView):
 #     form_class = AuthenticationForm
@@ -90,4 +102,4 @@ def personal(request):
         info.post = post
         info.user = request.user
         info.save()
-    return render(request, 'main/PersonalArea.html', locals())
+    return render(request, 'main/PersonalArea.html', {'form':form})  #locals()

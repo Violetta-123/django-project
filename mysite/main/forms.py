@@ -25,7 +25,6 @@ class MyUserCreationForm(UserCreationForm):
     email = forms.EmailField(label='Эл.почта', widget=forms.EmailInput(attrs={'class': 'form-input'}))
     password1 = forms.CharField(label='Пароль', widget=forms.PasswordInput(attrs={'class': 'form-input'}))
     password2 = forms.CharField(label='Повторите пароль', widget=forms.PasswordInput(attrs={'class': 'form-input'}))
-
     class Meta:
         model = User
         fields = ['username', 'email', 'password1', 'password2']

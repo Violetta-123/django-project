@@ -47,18 +47,18 @@ class Timetable(models.Model):
 
 
 class Patient(models.Model):
-    surname = models.CharField(max_length=50, verbose_name='patient surname')
-    name = models.CharField(max_length=50, verbose_name='patient name')
-    patronymic = models.CharField(max_length=50, verbose_name='patient patronymic')
+    surname = models.CharField(max_length=50, verbose_name='patient surname', blank=True, null=True)
+    name = models.CharField(max_length=50, verbose_name='patient name', blank=True, null=True)
+    patronymic = models.CharField(max_length=50, verbose_name='patient patronymic', blank=True, null=True)
     login = models.CharField(max_length=100, verbose_name='login')
     password = models.CharField(max_length=100, verbose_name='password')
-    policy = models.CharField(max_length=20, verbose_name='policy')
+    policy = models.CharField(max_length=20, verbose_name='policy', blank=True, null=True)
     email = models.EmailField(blank=True, verbose_name='email')
-    number = models.CharField(max_length=20, verbose_name='number')
-    date = models.DateField(verbose_name='patient date')
+    number = models.CharField(max_length=20, verbose_name='number', blank=True, null=True)
+    date = models.DateField(verbose_name='patient date', blank=True, null=True)
 
-    def __str__(self):
-        return self.surname + ' ' + self.name
+    # def __str__(self):
+    #     return self.surname + ' ' + self.name
 
 
 class Record(models.Model):
