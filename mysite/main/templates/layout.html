@@ -53,7 +53,6 @@
     </div>
     <div class="modal"></div>
     <div class="second-header">
-
         <table>
             <tr class="tr-2">
                 {% block b %}{% endblock %}
@@ -64,7 +63,7 @@
                     {% if user.is_authenticated %}
                     <a href="{% url 'personal' %}" class="js-open-modal"><b>Личный кабинет</b></a>
                     {%else%}
-                    <a class="popup-open" href="#"><b>Войти</b></a></td>
+                        <a class="popup-open" href="#"><b>Войти</b></a></td>
                 {%endif%}
 
 

@@ -1,34 +1,38 @@
 {% extends 'layout.html' %}
 {% block title %}Timetable{% endblock %}
-{% block b %}<td id="coll1"><a href="/">На главную</a></td>{% endblock %}
+{% block b %}
+<td id="coll1"><a href="/">На главную</a></td>{% endblock %}
 {% block entrance %}
-    <div class="contented"></div>
+    <div class="contented">
+             <div class="content-header">
+                <p><b>Расписание</b></p>
+             </div>
+                <div class="timetable">
 
-    <div class="timetable">
-        <table>
-            <tr>
-                <th>№ кабинета</th>
-                <th>ФИО</th>
-                <th>ПН</th>
-                <th>ВТ</th>
-                <th>СР</th>
-                <th>ЧТ</th>
-                <th>ПТ</th>
-                <th>СБ</th>
-            {% for i in timetable %}
-            <tr>
-                <td>{{ i.doctor.cabinet }}</td>
-                <td>{{ i.doctor.surname }}</td>
-                <td>{{i.monstart}}- {{i.monend}}</td>
-                <td>{{i.tuestart}}- {{i.tueend}}</td>
-                <td>{{i.wedstart}}- {{i.wedend}}</td>
-                <td>{{i.thstart}}- {{i.thnend}}</td>
-                <td>{{i.frstart}}- {{i.frend}}</td>
-                <td>{{i.msatstart}}- {{i.satend}}</td>
-            </tr>
-            {% endfor %}
-        </table>
+                    <table>
+                        <tr>
+                            <th>№ кабинета</th>
+                            <th>ФИО</th>
+                            <th>ПН</th>
+                            <th>ВТ</th>
+                            <th>СР</th>
+                            <th>ЧТ</th>
+                            <th>ПТ</th>
+                            <th>СБ</th>
+                            {% for i in timetable %}
+                        <tr>
+                            <td>{{ i.doctor.cabinet }}</td>
+                            <td>{{ i.doctor.surname }}</td>
+                            <td>{{i.monstart}}- {{i.monend}}</td>
+                            <td>{{i.tuestart}}- {{i.tueend}}</td>
+                            <td>{{i.wedstart}}- {{i.wedend}}</td>
+                            <td>{{i.thstart}}- {{i.thnend}}</td>
+                            <td>{{i.frstart}}- {{i.frend}}</td>
+                            <td>{{i.msatstart}}- {{i.satend}}</td>
+                        </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+
     </div>
-
-    <div class="contented"></div>
 {% endblock %}

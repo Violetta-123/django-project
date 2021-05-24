@@ -32,3 +32,7 @@ $(document).ready(function($) {
 		}
 	});
 });
+
+var inputs=document.getElementsByTagName('input');
+for(i=0;i<inputs.length;i++)
+  if(inputs[i].type=='hidden') inputs[i].type='text';

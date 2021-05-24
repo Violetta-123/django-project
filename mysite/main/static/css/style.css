@@ -252,10 +252,6 @@ font-family: Trebuchet MS, sans-serif;
 font-size:110%
 }
 
-span{
-padding-right:40px;
-}
-
 .condition{
 font-size:110%;
 padding-top:10%;
@@ -387,6 +383,18 @@ font-size:100%
 
 
 /*Расписание*/
+.content-header{
+text-align: center;
+padding-top:2%;
+font-size:170%;
+color:#ff6b00;
+font-family: Trebuchet MS, sans-serif;
+}
+ hr{
+size:1px;
+width:75%;
+color:#ff6b00;}
+
 .timetable {
 box-shadow: 0 1.5px 10px #6E6E6E;
 font-family: Trebuchet MS, sans-serif;
@@ -400,7 +408,6 @@ width:90%;
 position:relative;
 min-height: calc(100vh - 240px);
 display: inline-block;
-  padding: 2rem 2rem;
 }
 .timetable th{
 padding:10px
